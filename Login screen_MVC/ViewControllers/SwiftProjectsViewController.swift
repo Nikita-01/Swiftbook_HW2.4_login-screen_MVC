@@ -11,7 +11,7 @@ class SwiftProjectsViewController: UIViewController {
 
     @IBOutlet var iosProjectsLabel: UILabel!
     
-    var projects: [String] = ["Projects"]
+    var projects: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

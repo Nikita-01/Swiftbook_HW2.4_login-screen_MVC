@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var userPasswordTF: UITextField!
     
@@ -66,16 +66,15 @@ class LoginViewController: UIViewController {
                     aboutUserVC.personalInfo = Person.getPerson().information
                     aboutUserVC.hobby = Person.getPerson().hoddy
                 } else if let projectsVC = navigationVC.topViewController as? SwiftProjectsViewController {
-//                    projectsVC.projects = Person.getPerson().projects
-                    projectsVC.projects = ["-------"]
-                    }
-                
-        } else if let aboutProjectVC = viewController as? AboutProjectViewController {
-                    aboutProjectVC.realName = Person.getPerson().realName
+                    projectsVC.projects = Person.getPerson().projects
                 }
                 
+            } else if let aboutProjectVC = viewController as? AboutProjectViewController {
+                aboutProjectVC.realName = Person.getPerson().realName
             }
+            
         }
+    }
     @IBAction func unwind(for: UIStoryboardSegue, sender: Any?) {
         userNameTF.text = ""
         userPasswordTF.text = ""
