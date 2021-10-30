@@ -11,7 +11,7 @@ struct Person {
     var userName: String
     var userPassword: String
     var realName: String
-    var information: [Information: String]
+    var information: [String]
     var hoddy: [String]
     var projects: [String]
 }
@@ -29,10 +29,10 @@ extension Person {
                       userPassword: "Password",
                       realName: "Ivan Petrov",
                       information: [
-                        .height: Information.height.rawValue,
-                        .weight: Information.weight.rawValue,
-                        .eyeColor: Information.eyeColor.rawValue,
-                        .footSize: Information.footSize.rawValue
+                        "\(Information.height): \(Information.height.rawValue)",
+                        "\(Information.weight): \(Information.weight.rawValue)",
+                        "\(Information.eyeColor): \(Information.eyeColor.rawValue)",
+                        "\(Information.footSize): \(Information.footSize.rawValue)"
                       ],
                       hoddy: ["Sport", "Music", "Art"],
                       projects: ["Color change", "ColorMIX", "Login screen"])
